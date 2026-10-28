@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>菊香西陵 乐购有礼</title>
+<style id="theme-vars">
+:root{
+--jx-background:#faf4ea;--jx-foreground:#2e261d;--jx-card:#fffdf8;--jx-card-foreground:#2e261d;
+--jx-popover:#fffdf8;--jx-popover-foreground:#2e261d;
+--jx-primary:#c0441c;--jx-primary-foreground:#fff8ef;--jx-primary-soft:#f7e7db;
+--jx-muted:#f2e9db;--jx-muted-foreground:#776a59;--jx-border:#e7dcc9;--jx-input:#e0d3bd;--jx-ring:#c0441c;
+--jx-pine:#3f6b4f;--jx-pine-soft:#e6efe6;--jx-gold:#b9802e;--jx-ink-soft:#5c5040;--jx-state-error:#b4371f;
+--jx-radius-sm:6px;--jx-radius-md:12px;--jx-radius-lg:16px;
+--jx-shadow-card:0 1px 2px rgba(74,56,33,.05),0 2px 8px -2px rgba(74,56,33,.05);
+--jx-shadow-float:0 10px 30px -10px rgba(74,56,33,.22);
+--jx-font-sans:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+--jx-font-serif:"Noto Serif SC","Source Han Serif SC","Songti SC",STsong,SimSun,serif}
+@theme inline{
+--color-background:var(--jx-background);--color-foreground:var(--jx-foreground);
+--color-card:var(--jx-card);--color-card-foreground:var(--jx-card-foreground);
+--color-popover:var(--jx-popover);--color-popover-foreground:var(--jx-popover-foreground);
+--color-primary:var(--jx-primary);--color-primary-foreground:var(--jx-primary-foreground);
+--color-muted:var(--jx-muted);--color-muted-foreground:var(--jx-muted-foreground);
+--color-border:var(--jx-border);--color-input:var(--jx-input);--color-ring:var(--jx-ring);
+--color-destructive:var(--jx-state-error);--color-destructive-foreground:var(--jx-primary-foreground);
+--radius-sm:var(--jx-radius-sm);--radius-md:var(--jx-radius-md);--radius-lg:var(--jx-radius-lg)}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+<style id="semantic-token-fallback">
+.bg-background{background-color:var(--jx-background)}.bg-card,.bg-popover{background-color:var(--jx-card)}
+.bg-foreground,.bg-card-foreground,.bg-popover-foreground{background-color:var(--jx-foreground)}
+.bg-primary{background-color:var(--jx-primary)}.bg-primary-foreground,.bg-destructive-foreground{background-color:var(--jx-primary-foreground)}
+.bg-muted{background-color:var(--jx-muted)}.bg-muted-foreground{background-color:var(--jx-muted-foreground)}
+.bg-border{background-color:var(--jx-border)}.bg-input{background-color:var(--jx-input)}.bg-ring{background-color:var(--jx-ring)}
+.bg-destructive{background-color:var(--jx-state-error)}
+.text-background{color:var(--jx-background)}.text-card,.text-popover{color:var(--jx-card)}
+.text-foreground,.text-card-foreground,.text-popover-foreground{color:var(--jx-foreground)}
+.text-primary{color:var(--jx-primary)}.text-primary-foreground,.text-destructive-foreground{color:var(--jx-primary-foreground)}
+.text-muted{color:var(--jx-muted)}.text-muted-foreground{color:var(--jx-muted-foreground)}
+.text-border{color:var(--jx-border)}.text-input{color:var(--jx-input)}.text-ring{color:var(--jx-ring)}
+.text-destructive{color:var(--jx-state-error)}
+.border-background{border-color:var(--jx-background)}.border-card,.border-popover{border-color:var(--jx-card)}
+.border-foreground,.border-card-foreground,.border-popover-foreground{border-color:var(--jx-foreground)}
+.border-primary{border-color:var(--jx-primary)}.border-primary-foreground,.border-destructive-foreground{border-color:var(--jx-primary-foreground)}
+.border-muted{border-color:var(--jx-muted)}.border-muted-foreground{border-color:var(--jx-muted-foreground)}
+.border-border{border-color:var(--jx-border)}.border-input{border-color:var(--jx-input)}.border-ring{border-color:var(--jx-ring)}
+.border-destructive{border-color:var(--jx-state-error)}
+.ring-background{--tw-ring-color:var(--jx-background)}.ring-card,.ring-popover{--tw-ring-color:var(--jx-card)}
+.ring-foreground,.ring-card-foreground,.ring-popover-foreground{--tw-ring-color:var(--jx-foreground)}
+.ring-primary{--tw-ring-color:var(--jx-primary)}.ring-primary-foreground,.ring-destructive-foreground{--tw-ring-color:var(--jx-primary-foreground)}
+.ring-muted{--tw-ring-color:var(--jx-muted)}.ring-muted-foreground{--tw-ring-color:var(--jx-muted-foreground)}
+.ring-border{--tw-ring-color:var(--jx-border)}.ring-input{--tw-ring-color:var(--jx-input)}.ring-ring{--tw-ring-color:var(--jx-ring)}
+.ring-destructive{--tw-ring-color:var(--jx-state-error)}
+</style>
+<style id="critical-layout">
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:clip;background:var(--jx-background);color:var(--jx-foreground);font-family:var(--jx-font-sans);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+img{max-width:100%}#page-index{width:100%;max-width:480px;margin:0 auto;position:relative;padding-bottom:8px}
+h1,h2,h3,p,ul,figure{margin:0}ul{padding:0;list-style:none}button{font-family:inherit;cursor:pointer}
+a{-webkit-tap-highlight-color:transparent}:focus-visible{outline:2px solid var(--jx-primary);outline-offset:2px;border-radius:var(--jx-radius-sm)}
+.hero-banner{position:relative;height:46vh;min-height:300px;max-height:400px;overflow:hidden}
+.hero-banner img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(250,244,234,0) 42%,rgba(250,244,234,.82) 86%,var(--jx-background) 100%)}
+.hero-panel{position:relative;margin-top:-18px;padding:4px 16px 0}
+.hero-eyebrow{display:flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.12em;color:var(--jx-muted-foreground)}
+.motif-chrys{color:var(--jx-gold);flex:none;width:14px;height:14px}
+.hero-title{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:10px}
+.hero-title-main{font-family:var(--jx-font-serif);font-weight:700;font-size:38px;line-height:1.1;letter-spacing:.04em}
+.hero-seal{display:grid;grid-template-columns:repeat(2,1fr);place-items:center;flex:none;width:74px;height:74px;border-radius:8px;background:var(--jx-primary);color:var(--jx-primary-foreground);font-family:var(--jx-font-serif);font-weight:700;font-size:24px;line-height:1;box-shadow:inset 0 0 0 2px rgba(255,248,239,.85),var(--jx-shadow-card)}
+.hero-subtitle{margin-top:12px;font-size:14px;line-height:1.75;color:var(--jx-ink-soft)}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;background:var(--jx-primary-soft);color:var(--jx-primary);font-size:13px;font-weight:500;line-height:1.4}
+.pill svg{width:14px;height:14px}
+.anchor-nav{position:sticky;top:10px;z-index:30;margin:18px 16px 0}
+.anchor-nav-inner{display:flex;align-items:center;gap:2px;padding:4px;border-radius:999px;background:rgba(255,253,248,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--jx-shadow-card)}
+.anchor-nav a{position:relative;flex:1 1 0;min-width:0;padding:8px 1px 9px;text-align:center;font-size:12.5px;line-height:1.3;white-space:nowrap;color:var(--jx-muted-foreground);text-decoration:none;border-radius:999px;transition:color .2s,background-color .2s}
+.anchor-nav a:active{background:var(--jx-primary-soft)}.anchor-nav a.is-active{color:var(--jx-primary);font-weight:600}
+.anchor-nav a.is-active::after{content:"";position:absolute;left:50%;bottom:3px;width:16px;height:2px;border-radius:2px;background:var(--jx-primary);transform:translateX(-50%)}
+.sec{margin-top:44px;padding:0 16px;scroll-margin-top:78px}#coupon-food{margin-top:30px}
+.seal-tag{display:inline-flex;align-items:center;padding:4px 9px;border-radius:var(--jx-radius-sm);background:var(--jx-primary);color:var(--jx-primary-foreground);font-size:11px;letter-spacing:.14em;line-height:1.4}
+.sec-title{margin-top:12px;font-family:var(--jx-font-serif);font-weight:700;font-size:26px;line-height:1.25;letter-spacing:.02em;overflow-wrap:break-word}
+.title-row{display:flex;align-items:center;gap:10px}.title-row .sec-title{margin-top:0}
+.sec-eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--jx-gold)}
+.sec-intro{margin-top:10px;font-size:14px;line-height:1.75;color:var(--jx-ink-soft)}
+.card{margin-top:16px;padding:18px 16px;border-radius:var(--jx-radius-lg);background:var(--jx-card);box-shadow:var(--jx-shadow-card)}
+.rule-text{font-size:14.5px;line-height:1.9;overflow-wrap:break-word}
+.full-img{display:block;width:100%;height:auto;border-radius:var(--jx-radius-md)}
+.ico{display:inline-flex;align-items:center;justify-content:center;flex:none;width:30px;height:30px;border-radius:var(--jx-radius-md);background:var(--jx-primary-soft);color:var(--jx-primary)}
+.ico svg{width:17px;height:17px}.ico-sm{width:26px;height:26px;margin-top:2px}.ico-sm svg{width:15px;height:15px}
+.flow-card{padding:12px}
+.flow-caption{margin-top:12px;padding:0 4px 2px;font-size:12.5px;line-height:1.85;color:var(--jx-muted-foreground)}
+.notice-list{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.notice-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.75;color:var(--jx-ink-soft)}
+.tiers{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.tier{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;border-radius:var(--jx-radius-lg);background:var(--jx-card);box-shadow:var(--jx-shadow-card)}
+.tier-cond{flex:1 1 auto;min-width:0;font-size:14px;font-weight:500;line-height:1.55}
+.tier-reward{flex:none;text-align:right;white-space:nowrap}.tier-line{display:flex;align-items:baseline;justify-content:flex-end;gap:5px;white-space:nowrap}
+.tier-line small{font-size:12px;font-weight:500;color:var(--jx-muted-foreground)}
+.tier-num{font-size:26px;font-weight:700;letter-spacing:-.01em;color:var(--jx-primary);font-variant-numeric:tabular-nums}
+.tier-num i{font-style:normal;font-size:13px;font-weight:600;margin-left:1px}
+.tier-label{display:block;margin-top:1px;font-size:11.5px;color:var(--jx-muted-foreground);text-align:right}
+.map-card{position:relative;padding:10px}
+.zoom-btn{position:absolute;top:20px;right:20px;display:inline-flex;align-items:center;gap:5px;padding:7px 11px;border:none;border-radius:var(--jx-radius-md);background:rgba(255,253,248,.92);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:var(--jx-shadow-card);color:var(--jx-primary);font-size:12px;line-height:1.3;transition:transform .15s,background-color .2s}
+.zoom-btn svg{width:14px;height:14px}.zoom-btn:active{transform:scale(.96)}
+.map-lightbox{position:fixed;inset:0;z-index:100}.map-lightbox[hidden]{display:none}
+.lb-backdrop{position:absolute;inset:0;background:rgba(46,38,29,.72);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);opacity:0;transition:opacity .24s}
+.lb-close{position:absolute;top:16px;right:16px;z-index:2;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:none;border-radius:var(--jx-radius-md);background:rgba(255,253,248,.96);color:var(--jx-foreground);box-shadow:var(--jx-shadow-float);transition:transform .15s}
+.lb-close svg{width:22px;height:22px}.lb-close:active{transform:scale(.94)}
+.lb-frame{position:absolute;z-index:1;top:68px;right:12px;bottom:20px;left:12px;margin:0;opacity:0;transform:translateY(8px) scale(.985);transition:opacity .24s,transform .24s}
+.map-lightbox.open .lb-backdrop{opacity:1}.map-lightbox.open .lb-frame{opacity:1;transform:none}
+.lb-scroll{width:100%;height:100%;overflow:auto;border-radius:var(--jx-radius-md);background:var(--jx-card);-webkit-overflow-scrolling:touch}
+.lb-scroll img{display:block;width:auto;max-width:none;height:auto;min-width:100%}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
+.stat{min-width:0;padding:14px 15px;border-radius:var(--jx-radius-lg);background:var(--jx-card);box-shadow:var(--jx-shadow-card)}
+.stat--total{grid-column:1/-1;background:var(--jx-pine-soft);box-shadow:none}
+.stat-label{font-size:12px;color:var(--jx-muted-foreground)}
+.stat-num{margin-top:5px;font-size:22px;font-weight:700;line-height:1.3;font-variant-numeric:tabular-nums;overflow-wrap:break-word}
+.stat-num .u{margin-left:4px;font-size:12px;font-weight:500;color:var(--jx-muted-foreground)}
+.stat--total .stat-num .u{color:var(--jx-ink-soft)}
+.cat-card{margin-top:14px;padding:0 16px;border-radius:var(--jx-radius-lg);background:var(--jx-card);box-shadow:var(--jx-shadow-card)}
+.cat-head{display:flex;align-items:center;gap:10px;padding:14px 0 10px}
+.cat-name{font-family:var(--jx-font-serif);font-size:19px;font-weight:700}
+.loc-row{display:flex;flex-direction:column;gap:4px;min-height:56px;padding:12px 0;border-top:1px solid var(--jx-border)}
+.loc-title{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:15px;font-weight:600;line-height:1.45}
+.loc-tag{padding:2px 8px;border-radius:999px;background:var(--jx-muted);color:var(--jx-muted-foreground);font-size:11px;font-weight:400;white-space:nowrap}
+.loc-desc{font-size:13px;line-height:1.65;color:var(--jx-muted-foreground);overflow-wrap:break-word}
+.xiling-note{margin-top:16px;padding:0 2px;font-size:12px;line-height:1.75;color:var(--jx-muted-foreground)}
+.site-footer{margin:48px 16px 32px;padding-top:28px;border-top:1px solid var(--jx-border);text-align:center}
+.footer-org{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
+.footer-motif{color:var(--jx-primary);width:18px;height:18px}
+.footer-sub{margin-top:9px;font-family:var(--jx-font-serif);font-size:15px;letter-spacing:.04em;color:var(--jx-ink-soft)}
+.footer-disclaimer{margin-top:12px;font-size:11.5px;line-height:1.85;color:var(--jx-muted-foreground)}
+html.anim-on .reveal{opacity:0;transform:translateY(12px);transition:opacity .3s cubic-bezier(.3,0,0,1),transform .3s cubic-bezier(.3,0,0,1)}
+html.anim-on .reveal.in{opacity:1;transform:none}
+@media (min-width:520px){.anchor-nav{margin-left:auto;margin-right:auto;max-width:448px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html.anim-on .reveal{opacity:1!important;transform:none!important}}
+</style>
+<script>
+function jxInit(){
+if(window.lucide&&lucide.createIcons)lucide.createIcons();
+var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches,nav=document.querySelectorAll(".anchor-nav a[href^='#']");
+function go(t){t.scrollIntoView({behavior:rm?"auto":"smooth",block:"start"})}
+nav.forEach(function(a){a.addEventListener("click",function(e){var t=document.querySelector(a.getAttribute("href"));if(t){e.preventDefault();go(t)}})});
+var map={};nav.forEach(function(a){map[a.getAttribute("href").slice(1)]=a});
+if("IntersectionObserver"in window){var spy=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){nav.forEach(function(x){x.classList.remove("is-active")});var a=map[en.target.id];if(a)a.classList.add("is-active")}})},{rootMargin:"-40% 0px -55% 0px"});
+["coupon-food","coupon-car","guide-map","parking-map","xiling-map"].forEach(function(id){var el=document.getElementById(id);if(el)spy.observe(el)})}
+var rv=document.querySelectorAll(".reveal");
+if("IntersectionObserver"in window&&!rm){document.documentElement.classList.add("anim-on");
+var ro=new IntersectionObserver(function(es,o){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");o.unobserve(en.target)}})},{threshold:.12,rootMargin:"0px 0px -8% 0px"});
+rv.forEach(function(el){ro.observe(el)})}else{rv.forEach(function(el){el.classList.add("in")})}
+var box=null,last=null;
+function openBox(id){var b=document.getElementById(id);if(!b||box)return;box=b;last=document.activeElement;b.hidden=false;
+if(rm)b.classList.add("open");else requestAnimationFrame(function(){requestAnimationFrame(function(){b.classList.add("open")})});
+document.body.style.overflow="hidden";var c=b.querySelector(".lb-close");if(c)c.focus()}
+function closeBox(){if(!box)return;var b=box;b.classList.remove("open");document.body.style.overflow="";box=null;
+setTimeout(function(){b.hidden=true},rm?0:260);if(last&&typeof last.focus==="function")last.focus()}
+document.querySelectorAll("[data-lightbox]").forEach(function(b){b.addEventListener("click",function(){openBox(b.getAttribute("data-lightbox"))})});
+document.querySelectorAll(".map-lightbox").forEach(function(b){b.addEventListener("click",function(e){if(e.target===b||e.target.classList.contains("lb-backdrop"))closeBox()});
+var c=b.querySelector(".lb-close");if(c)c.addEventListener("click",closeBox)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&box)closeBox()})}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",jxInit);else jxInit();
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="jxc" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="12" cy="5.6" rx="2" ry="3.2"></ellipse><ellipse cx="12" cy="5.6" rx="2" ry="3.2" transform="rotate(45 12 12)"></ellipse><ellipse cx="12" cy="5.6" rx="2" ry="3.2" transform="rotate(90 12 12)"></ellipse><ellipse cx="12" cy="5.6" rx="2" ry="3.2" transform="rotate(135 12 12)"></ellipse><ellipse cx="12" cy="5.6" rx="2" ry="3.2" transform="rotate(180 12 12)"></ellipse><ellipse cx="12" cy="5.6" rx="2" ry="3.2" transform="rotate(225 12 12)"></ellipse><ellipse cx="12" cy="5.6" rx="2" ry="3.2" transform="rotate(270 12 12)"></ellipse><ellipse cx="12" cy="5.6" rx="2" ry="3.2" transform="rotate(315 12 12)"></ellipse></g><circle cx="12" cy="12" r="2.1" fill="#fff8ef"></circle></symbol></svg>
+<main id="page-index">
+<section id="hero" class="hero">
+<div class="hero-banner"><img src="https://h.uguu.se/BBwtgXZt.jpg" alt="第41届菊花展主视觉：金秋菊展、长江与古塔" width="750" height="900" decoding="async"></div>
+<div class="hero-panel">
+<p class="hero-eyebrow"><svg class="motif-chrys"><use href="#jxc"></use></svg>第41届菊花展 · 城市消费联动</p>
+<h1 class="hero-title"><span class="hero-title-main">菊香西陵</span><span class="hero-seal" aria-label="乐购有礼"><span>乐</span><span>购</span><span>有</span><span>礼</span></span></h1>
+<p class="hero-subtitle">赏菊滨江畔，乐购西陵区。两大消费券二期活动同步开启。</p>
+<div class="hero-pills"><span class="pill"><i data-lucide="ticket" stroke-width="1.5"></i>美食消费券</span><span class="pill"><i data-lucide="car" stroke-width="1.5"></i>汽车消费券</span></div>
+</div>
+</section>
+<nav class="anchor-nav" aria-label="页面锚点快捷跳转"><div class="anchor-nav-inner">
+<a href="#coupon-food" class="is-active">美食券</a><a href="#coupon-car">汽车券</a><a href="#guide-map">菊展导览</a><a href="#parking-map">停车图</a><a href="#xiling-map">逛西陵</a>
+</div></nav>
+<section id="coupon-food" class="sec">
+<header class="sec-head reveal"><span class="seal-tag">活动一 · 美食消费券</span><h2 class="sec-title">乐购西陵 · 食享好礼</h2></header>
+<div class="card reveal"><p class="rule-text">消费者在参与活动的商户购买绿色家电、数码及智能家居产品，单笔消费达到规定金额的，可通过“票根联盟”平台上传发票，申领餐饮消费券。</p></div>
+<figure class="card flow-card reveal"><img class="full-img" src="https://n.uguu.se/NcnxPsQF.jpg" alt="乐购西陵食享好礼第二期 上传发票领消费券六步流程" loading="lazy" decoding="async"><figcaption class="flow-caption">上传发票领券六步走：下载“我的宜昌”客户端 → 首页进入“宜票通” → 点击本期活动 → 上传发票 → 领券到店核销</figcaption></figure>
+<ul class="notice-list reveal">
+<li><span class="ico ico-sm"><i data-lucide="list-checks" stroke-width="1.5"></i></span><span>申领平台“票根联盟”待方案过审后，统一招投标选取第三方机构运营。</span></li>
+<li><span class="ico ico-sm"><i data-lucide="list-checks" stroke-width="1.5"></i></span><span>补贴数量有限，先到先得，领取完毕活动自动终止。</span></li>
+</ul>
+</section>
+<section id="coupon-car" class="sec">
+<header class="sec-head reveal"><span class="seal-tag">活动二 ·汽车消费券</span><h2 class="sec-title">西陵车惠 · 宜路有礼</h2></header>
+<div class="card reveal"><p class="rule-text">活动期间，个人消费者在参与活动的汽车销售企业购买新乘用车，并在西陵区开具新车发票的，可根据新车销售价格抢得消费券并予以核减。</p></div>
+<div class="tiers reveal">
+<div class="tier"><p class="tier-cond">新车售价 25万元（含）以上</p><div class="tier-reward"><span class="tier-line"><small>核销</small><strong class="tier-num">5000<i>元</i></strong></span><span class="tier-label">消费券</span></div></div>
+<div class="tier"><p class="tier-cond">10万元（含）至 25万元以下</p><div class="tier-reward"><span class="tier-line"><small>核销</small><strong class="tier-num">4000<i>元</i></strong></span><span class="tier-label">消费券</span></div></div>
+<div class="tier"><p class="tier-cond">5万元（含）至 10万元以下</p><div class="tier-reward"><span class="tier-line"><small>核销</small><strong class="tier-num">3000<i>元</i></strong></span><span class="tier-label">消费券</span></div></div>
+</div>
+<ul class="notice-list reveal">
+<li><span>需在参与活动的汽车销售企业购车，并在西陵区开具新车发票。</span></li>
+<li><span>4S 店直接刷卡，消费券在购车款中直接核减。</span></li>
+<li><span>补贴数量有限，先到先得，领取完毕活动自动终止。</span></li>
+</ul>
+</section>
+<section id="guide-map" class="sec">
+<header class="sec-head reveal"><div class="title-row"><h2 class="sec-title">菊展导览图</h2></div><p class="sec-intro">展区沿滨江公园一线展开，主入口、主题造景与活动展位编号见下图。</p></header>
+<div class="card map-card reveal"><img class="full-img" src="https://h.uguu.se/PbgpigdR.jpg" alt="第41届菊花展展区导览航拍长图" loading="lazy" decoding="async"><button type="button" class="zoom-btn" data-lightbox="lightbox-guide"><i data-lucide="maximize-2" stroke-width="1.5"></i>点击放大</button></div>
+</section>
+<section id="parking-map" class="sec">
+<header class="sec-head reveal"><div class="title-row"><h2 class="sec-title">展位及停车示意图</h2></div><p class="sec-intro">第41届菊花展展位分布与周边停车场一览，建议绿色出行、公交抵达。</p></header>
+<div class="card map-card reveal"><img class="full-img" src="https://d.uguu.se/EexZWQEi.jpg" alt="第41届菊花展展位及停车示意图" loading="lazy" decoding="async"><button type="button" class="zoom-btn" data-lightbox="lightbox-parking"><i data-lucide="maximize-2" stroke-width="1.5"></i>点击放大</button></div>
+<div class="stats reveal">
+<div class="stat"><p class="stat-label">距展区 0–1km</p><p class="stat-num">1137<span class="u">个车位</span></p></div>
+<div class="stat"><p class="stat-label">1–2km</p><p class="stat-num">2066<span class="u">个车位</span></p></div>
+<div class="stat"><p class="stat-label">2–3km</p><p class="stat-num">3800<span class="u">个车位</span></p></div>
+<div class="stat stat--total"><p class="stat-label">双亭广场周边合计</p><p class="stat-num">7003<span class="u">个车位（不含路侧泊位）</span></p></div>
+</div>
+</section>
+<section id="xiling-map" class="sec">
+<header class="sec-head reveal"><p class="sec-eyebrow">吃 · 喝 · 玩 · 乐 在西陵</p><h2 class="sec-title">逛展消费地图</h2><p class="sec-intro">看完菊展逛西陵，美食、咖啡、江景、商圈一站集齐。</p></header>
+
+
+
+
+<p class="xiling-note reveal">参与本次消费券活动的具体商户名单，以“我的宜昌”客户端活动页及店内公示为准。</p>
+</section>
+<footer class="site-footer reveal">
+<p class="footer-org"><svg class="motif-chrys footer-motif"><use href="#jxc"></use></svg>宜昌市西陵区商务局 主办</p>
+<p class="footer-sub">第41届菊花展 · 菊香西陵 乐购有礼</p>
+<p class="footer-disclaimer">本页面为活动宣传信息，活动时间、参与商户及补贴细则以现场公告和“我的宜昌”客户端官方发布为准。补贴数量有限，先到先得，领取完毕活动自动终止。</p>
+</footer>
+<div class="map-lightbox" id="lightbox-guide" hidden>
+<div class="lb-backdrop"></div><button type="button" class="lb-close" aria-label="关闭放大图"><i data-lucide="x" stroke-width="1.5"></i></button>
+<div class="lb-frame" role="dialog" aria-modal="true" aria-label="菊展导览图放大查看"><div class="lb-scroll"><img src="https://h.uguu.se/PbgpigdR.jpg" alt="第41届菊花展展区导览航拍长图" decoding="async"></div></div>
+</div>
+<div class="map-lightbox" id="lightbox-parking" hidden>
+<div class="lb-backdrop"></div><button type="button" class="lb-close" aria-label="关闭放大图"><i data-lucide="x" stroke-width="1.5"></i></button>
+<div class="lb-frame" role="dialog" aria-modal="true" aria-label="展位及停车示意图放大查看"><div class="lb-scroll"><img src="https://d.uguu.se/EexZWQEi.jpg" alt="第41届菊花展展位及停车示意图" decoding="async"></div></div>
+</div>
+</main>
+</body>
+</html>
